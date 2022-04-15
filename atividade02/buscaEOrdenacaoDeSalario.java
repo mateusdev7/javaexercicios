@@ -151,7 +151,7 @@ public class buscaEOrdenacaoDeSalario {
             if (pesquisaSalario == vetSalariosOrdenados[meio]) {
                 contadorBinario++;
                 break;
-            }if (pesquisaSalario < vetSalariosOrdenados[meio]) {
+            }else if (pesquisaSalario < vetSalariosOrdenados[meio]) {
                 contadorBinario++;
                 fim = meio - 1;
             }else {
