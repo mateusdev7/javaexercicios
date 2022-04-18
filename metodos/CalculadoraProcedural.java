@@ -10,35 +10,42 @@ public class CalculadoraProcedural {
 		int opcao = 0;
 		menuDeEscolhas();
 		opcao = ler.nextInt();
-
+		while(opcao < 0 || opcao > 4) {
+			System.out.println("\nOpção inválida, selecione uma das opções abaixo\n");
+			menuDeEscolhas();
+			opcao = ler.nextInt();
+		}
 		while (opcao != 0) {
-			double num1, num2;
+			double num1;
+			double num2;
 			System.out.println("Digite o primeiro valor: ");
 			num1 = ler.nextDouble();
 			System.out.println("Digite o segundo valor: ");
 			num2 = ler.nextDouble();
 			switch (opcao) {
+			case 0:
+				System.out.println("Você saiu do programa");
+				break;
 			case 1: 
 				somarNumeros(num1, num2);
-				// System.exit(0);
 				break;
 			case 2: 
 				subtrairNumeros(num1, num2);
-				// System.exit(0);
 				break;
 			case 3:
 				multiplicarNumeros(num1, num2);
-				// System.exit(0);
 				break;
 			case 4:
 				dividirNumeros(num1, num2);
-				// System.exit(0);
 				break;
-			default:
-				System.out.println("Desculpe, não conseguimos fazer o calculo, pois, a opção não existe");
 			}
 			menuDeEscolhas();
 			opcao = ler.nextInt();
+			while(opcao < 0 || opcao > 4) {
+				System.out.println("\nOpção inválida, selecione uma das opções abaixo\n");
+				menuDeEscolhas();
+				opcao = ler.nextInt();
+			}	
 		}
 		ler.close();
 	}
