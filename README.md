@@ -1,3 +1,3 @@
 # exercicios java
 
-Atividades feitas durante as aulas na faculdade e em casa
+Aqui estão algumas atividades exercidas durante as aulas na faculdade em Java
